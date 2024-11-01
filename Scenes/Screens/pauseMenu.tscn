@@ -1,0 +1,365 @@
+[gd_scene load_steps=23 format=3 uid="uid://bakpaqshc5ke6"]
+
+[ext_resource type="Texture2D" uid="uid://c4m737jdsbojc" path="res://Art/PauseMenu/playey.png" id="1_e5wpv"]
+[ext_resource type="Script" path="res://Scripts/pauseScript.gd" id="1_o6ocf"]
+[ext_resource type="Texture2D" uid="uid://dk3n44heilt7k" path="res://Art/PauseMenu/playey - Copy - Copy.png" id="2_pyoav"]
+[ext_resource type="Texture2D" uid="uid://058k27hveynv" path="res://Art/PauseMenu/playey - Copy.png" id="3_ew0r6"]
+[ext_resource type="Shader" path="res://Scripts/pauseMenu.gdshader" id="4_w500p"]
+[ext_resource type="Texture2D" uid="uid://bvb3oc2jcb544" path="res://Art/PauseMenu/pausy.png" id="6_guba5"]
+[ext_resource type="Texture2D" uid="uid://bu2vdgu5d3x5i" path="res://Art/PauseMenu/pausy - Copy - Copy.png" id="7_thd0f"]
+[ext_resource type="Texture2D" uid="uid://camav7iyx6wn5" path="res://Art/PauseMenu/pausy - Copy.png" id="8_ftgr8"]
+[ext_resource type="AudioStream" uid="uid://bpm10cmin5lb4" path="res://Sounds/UI/pressbutton.ogg" id="9_d1of7"]
+
+[sub_resource type="Gradient" id="Gradient_l725x"]
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0.788235)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_63fl4"]
+gradient = SubResource("Gradient_l725x")
+fill_to = Vector2(0.478632, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_y3y52"]
+seed = 20
+frequency = 0.0111
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_aofey"]
+seamless = true
+noise = SubResource("FastNoiseLite_y3y52")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_fcuae"]
+noise_type = 3
+frequency = 0.0241
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_hdggt"]
+seamless = true
+noise = SubResource("FastNoiseLite_fcuae")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_khuaj"]
+shader = ExtResource("4_w500p")
+shader_parameter/spdyness = Vector2(0.1, 0.1)
+shader_parameter/spdyness2 = Vector2(0.13, -0.13)
+shader_parameter/spdyness3 = Vector2(-0.13, -0.03)
+shader_parameter/actualColor = Vector4(1, 1, 1, -0.02)
+shader_parameter/reddy = Vector4(0, 0.5, 0.8, 0.5)
+shader_parameter/invercolor = Vector4(1, 0, 0, 1)
+shader_parameter/texturee = SubResource("NoiseTexture2D_hdggt")
+shader_parameter/texture2 = SubResource("NoiseTexture2D_aofey")
+shader_parameter/faderTexture = SubResource("GradientTexture2D_63fl4")
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_71ipr"]
+
+[sub_resource type="Animation" id="Animation_wdmd8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/faderTexture:fill_from")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/actualColor")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector4(1, 1, 1, -0.02)]
+}
+
+[sub_resource type="Animation" id="Animation_uk71r"]
+resource_name = "Starter"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../LoadingShader:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_stp5m"]
+resource_name = "out"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/faderTexture:fill_from")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/actualColor")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector4(1, 1, 1, 0.5), Vector4(1, 1, 1, -0.6)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(25, 64), Vector2(1285, 64)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VBoxContainer:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(467, 320), Vector2(1285, 320)]
+}
+
+[sub_resource type="Animation" id="Animation_jfrou"]
+resource_name = "toPause"
+length = 0.25
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/faderTexture:fill_from")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.15, 0.25),
+"transitions": PackedFloat32Array(2, 0.5, 1, 1),
+"update": 0,
+"values": [Vector2(0.564, 0.846), Vector2(0.282, 0.423), Vector2(-0.1, -0.05), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/actualColor")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.25),
+"transitions": PackedFloat32Array(0.5, 1, 1),
+"update": 0,
+"values": [Vector4(1, 1, 1, -0.4), Vector4(1, 1, 1, 0.5), Vector4(1, 1, 1, 2)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.25),
+"transitions": PackedFloat32Array(0.5, 1, 1),
+"update": 0,
+"values": [Vector2(1285, 64), Vector2(18, 64), Vector2(25, 64)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VBoxContainer:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.25),
+"transitions": PackedFloat32Array(0.4, 1, 1),
+"update": 0,
+"values": [Vector2(467, 750), Vector2(467, 300), Vector2(467, 320)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q38yo"]
+_data = {
+"RESET": SubResource("Animation_wdmd8"),
+"Starter": SubResource("Animation_uk71r"),
+"out": SubResource("Animation_stp5m"),
+"toPause": SubResource("Animation_jfrou")
+}
+
+[node name="PauseMenu" type="CanvasLayer" node_paths=PackedStringArray("PauseyArea", "AnimatPlayr", "Bumpscositext", "musicSlider", "soundSlider")]
+process_mode = 3
+script = ExtResource("1_o6ocf")
+PauseyArea = NodePath("TextureRect")
+AnimatPlayr = NodePath("TextureRect/AnimationPlayer")
+Bumpscositext = NodePath("TextureRect/VBoxContainer/Bumpscosity/Bumpscositext")
+musicSlider = NodePath("TextureRect/VBoxContainer/Music/HSlider")
+soundSlider = NodePath("TextureRect/VBoxContainer/sounds/HSlider")
+
+[node name="PauseButton" type="TextureButton" parent="."]
+z_index = -2
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 79.0
+offset_bottom = 79.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("1_e5wpv")
+texture_pressed = ExtResource("2_pyoav")
+texture_hover = ExtResource("3_ew0r6")
+texture_disabled = ExtResource("1_e5wpv")
+texture_focused = ExtResource("1_e5wpv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+material = SubResource("ShaderMaterial_khuaj")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("PlaceholderTexture2D_71ipr")
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 64.0
+offset_right = 1069.0
+offset_bottom = 277.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 156
+text = "Tuna Timeout"
+
+[node name="PlayButton" type="TextureButton" parent="TextureRect"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 79.0
+offset_bottom = 79.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("6_guba5")
+texture_pressed = ExtResource("7_thd0f")
+texture_hover = ExtResource("8_ftgr8")
+texture_disabled = ExtResource("6_guba5")
+texture_focused = ExtResource("6_guba5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1747.0
+offset_top = 1040.0
+offset_right = 2093.0
+offset_bottom = 1351.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="Bumpscosity" type="Label" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "Bumpscosity"
+
+[node name="HSlider" type="HSlider" parent="TextureRect/VBoxContainer/Bumpscosity"]
+layout_mode = 2
+offset_top = 81.0
+offset_right = 346.0
+offset_bottom = 97.0
+max_value = 7.0
+
+[node name="Bumpscositext" type="Label" parent="TextureRect/VBoxContainer/Bumpscosity"]
+layout_mode = 0
+offset_left = 362.0
+offset_top = 39.0
+offset_right = 402.0
+offset_bottom = 62.0
+scale = Vector2(3.57, 3.57)
+text = "32
+"
+
+[node name="Music" type="Label" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "Music"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="TextureRect/VBoxContainer/Music"]
+layout_mode = 2
+offset_top = 81.0
+offset_right = 346.0
+offset_bottom = 97.0
+max_value = 1.0
+step = 0.01
+
+[node name="sounds" type="Label" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "Sounds"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="TextureRect/VBoxContainer/sounds"]
+layout_mode = 2
+offset_top = 81.0
+offset_right = 346.0
+offset_bottom = 97.0
+max_value = 1.0
+step = 0.01
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect"]
+libraries = {
+"": SubResource("AnimationLibrary_q38yo")
+}
+autoplay = "Starter"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TextureRect"]
+stream = ExtResource("9_d1of7")
+bus = &"Sound"
+
+[node name="LoadingShader" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="TextureRect/PlayButton" to="." method="_on_pause_button_pressed"]
+[connection signal="value_changed" from="TextureRect/VBoxContainer/Bumpscosity/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="TextureRect/VBoxContainer/Music/HSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="TextureRect/VBoxContainer/sounds/HSlider" to="." method="_on_sound_slider_value_changed"]
