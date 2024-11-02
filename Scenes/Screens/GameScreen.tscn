@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bea40v36n8hoc"]
+
+[ext_resource type="PackedScene" uid="uid://5hdwnchwawle" path="res://Scenes/Screens/GameGrid.tscn" id="1_7yhet"]
+
+[node name="GameScreen" type="Node2D"]
+
+[node name="GameGrid" parent="." instance=ExtResource("1_7yhet")]
+position = Vector2(736, 0)
