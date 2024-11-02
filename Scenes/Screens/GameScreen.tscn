@@ -12,7 +12,5 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="GameGrid" parent="." instance=ExtResource("1_7yhet")]
-offset_left = 696.0
-offset_right = 696.0
 
 [node name="ResourceHarvester" parent="." instance=ExtResource("2_5hyvp")]
