@@ -4,9 +4,11 @@ var gridTileScene: PackedScene = preload("res://Scenes/GridTile.tscn")
 
 # Store all tiles in a dictionary
 var tiles = {}
+var tileQuantities = {}
 
 func _ready() -> void:
 	load_tiles_from_folder("res://gridTileJSONS/")
+	set_default_quantities()
 
 func load_tiles_from_folder(folder_path: String) -> void:
 	var dir = DirAccess.open(folder_path)
@@ -59,6 +61,14 @@ func load_tile_from_file(file_path: String) -> void:
 			print("Error parsing JSON in file", file_path)
 	else:
 		print("Failed to open file:", file_path)
+
+func set_default_quantities():
+	for tileName in tiles:
+		tileQuantities[tileName] = 0
+		tiles[tileName].refreshQuantity()
+
+func getQuantity(tile_name: String):
+	return tileQuantities[tile_name]
 
 # Function to get a tile by name
 func get_tile(tile_name: String) -> gridTile:

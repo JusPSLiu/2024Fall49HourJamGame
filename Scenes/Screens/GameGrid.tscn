@@ -5,7 +5,7 @@
 [node name="GameGrid" type="Node2D" node_paths=PackedStringArray("gameGridContainer")]
 script = ExtResource("1_q8jw7")
 gameGridContainer = NodePath("ScrollContainer/HBoxContainer/VBoxContainer/GridContainer")
-tileOrder = Array[String](["sample"])
+tileOrder = Array[String](["sample3", "sample2", "sample4", "sample5", "sample"])
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 584.0
@@ -38,6 +38,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="GridContainer" type="GridContainer" parent="ScrollContainer/HBoxContainer/VBoxContainer"]
+z_index = 10
 layout_mode = 2
 theme_override_constants/h_separation = 8
 theme_override_constants/v_separation = 8

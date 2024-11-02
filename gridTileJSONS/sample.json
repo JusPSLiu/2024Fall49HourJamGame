@@ -6,13 +6,13 @@
 	"components": 
 	[
 		{
-			"tileName": "sample",
-			"quantity": 1,
-			"catalyst": true
+			"tileName": "sample2",
+			"quantity": 2,
+			"catalyst": false
 		},
 		{
-			"tileName": "sample",
-			"quantity": 1,
+			"tileName": "sample3",
+			"quantity": 3,
 			"catalyst": false
 		}
 	]

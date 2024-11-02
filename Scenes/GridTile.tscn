@@ -13,6 +13,7 @@ script = ExtResource("1_m23jp")
 
 [node name="TextureButton" type="TextureButton" parent="."]
 custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
 offset_right = 64.0
 offset_bottom = 64.0
 texture_normal = ExtResource("2_fl7m8")
@@ -22,6 +23,59 @@ stretch_mode = 0
 
 [node name="TextureRect" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
 offset_right = 64.0
 offset_bottom = 64.0
 mouse_filter = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 41.0
+offset_right = 40.0
+offset_bottom = 64.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InfoCard" type="Control" parent="."]
+layout_mode = 1
+offset_left = -200.0
+offset_right = -200.0
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="InfoCard"]
+layout_mode = 0
+offset_right = 192.0
+offset_bottom = 128.0
+color = Color(0.470588, 0.470588, 0.470588, 0.976471)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InfoCard/ColorRect"]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 0
+offset_left = 4.0
+offset_right = 70.0
+offset_bottom = 128.0
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Label" type="Label" parent="InfoCard/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "sample"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InfoCard/ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="InfoCard/ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "description"
+
+[connection signal="mouse_entered" from="TextureButton" to="." method="_on_Button_mouse_entered"]
+[connection signal="mouse_exited" from="TextureButton" to="." method="_on_Button_mouse_exited"]

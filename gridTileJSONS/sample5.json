@@ -1,0 +1,9 @@
+{
+	"tileName": "sample5",
+	"image": "res://Art/sampleTile2.png",
+	"description": "No description",
+	"craftQuantity": 1,
+	"components": 
+	[
+	]
+}
