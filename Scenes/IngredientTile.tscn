@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/ingredient_tile.gd" id="1_avrr1"]
 
-[node name="IngredientTIle" type="Control"]
+[node name="IngredientTile" type="Control"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 3
 anchors_preset = 0

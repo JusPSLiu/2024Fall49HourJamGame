@@ -1,5 +1,4 @@
-extends Node2D
-
+extends Control
 class_name gameGrid
 
 @export var gameGridContainer: GridContainer

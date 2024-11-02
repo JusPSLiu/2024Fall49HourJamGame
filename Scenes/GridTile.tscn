@@ -79,3 +79,4 @@ text = "description"
 
 [connection signal="mouse_entered" from="TextureButton" to="." method="_on_Button_mouse_entered"]
 [connection signal="mouse_exited" from="TextureButton" to="." method="_on_Button_mouse_exited"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

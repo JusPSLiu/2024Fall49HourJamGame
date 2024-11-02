@@ -5,5 +5,10 @@
 	"craftQuantity": 1,
 	"components": 
 	[
+		{
+			"tileName": "sample",
+			"quantity": 162334,
+			"catalyst": true
+		}
 	]
 }

@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" path="res://Scripts/game_grid.gd" id="1_q8jw7"]
 
-[node name="GameGrid" type="Node2D" node_paths=PackedStringArray("gameGridContainer")]
+[node name="GameGrid" type="Control" node_paths=PackedStringArray("gameGridContainer")]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_q8jw7")
 gameGridContainer = NodePath("ScrollContainer/HBoxContainer/VBoxContainer/GridContainer")
 tileOrder = Array[String](["sample3", "sample2", "sample4", "sample5", "sample"])

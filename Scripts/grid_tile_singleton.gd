@@ -65,7 +65,7 @@ func load_tile_from_file(file_path: String) -> void:
 func set_default_quantities():
 	for tileName in tiles:
 		tileQuantities[tileName] = 0
-		tiles[tileName].refreshQuantity()
+	refreshAllTileQuantities()
 
 func getQuantity(tile_name: String):
 	return tileQuantities[tile_name]
@@ -73,3 +73,7 @@ func getQuantity(tile_name: String):
 # Function to get a tile by name
 func get_tile(tile_name: String) -> gridTile:
 	return tiles.get(tile_name, null)
+
+func refreshAllTileQuantities():
+	for tileName in tiles:
+		tiles[tileName].refresh()
