@@ -43,6 +43,16 @@ func load_tile_from_file(file_path: String) -> void:
 			tile.description = tile_data.get("description", "No description available")
 			tile.craftQuantity = int(tile_data.get("craftQuantity", 1))
 			
+			# Parse and set components
+			var components_data = tile_data.get("components", [])
+			for component_data in components_data:
+				var component = {
+					"tileName": component_data.get("tileName", "Unnamed Component"),
+					"quantity": int(component_data.get("quantity", 1)),
+					"catalyst": component_data.get("catalyst", false)
+				}
+				tile.components.append(component)
+			
 			# Add to tiles dictionary with tileName as the key
 			tiles[tile.tileName] = tile
 		else:

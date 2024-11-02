@@ -2,10 +2,11 @@ extends Control
 
 class_name gridTile
 
-@export var tileName: String = "baseTile"
-@export var image : Texture2D = preload("res://Art/sampleTile.png")
-@export var description: String = "No description"
-@export var craftQuantity: int = 1
+var tileName: String = "baseTile"
+var image : Texture2D = preload("res://Art/sampleTile.png")
+var description: String = "No description"
+var craftQuantity: int = 1
+var components: Array
 
 func _ready() -> void:
 	$TextureRect.texture = image

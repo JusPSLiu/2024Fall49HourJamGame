@@ -2,5 +2,18 @@
 	"tileName": "sample",
 	"image": "res://Art/sampleTile.png",
 	"description": "No description",
-	"craftQuantity": 1
+	"craftQuantity": 1,
+	"components": 
+	[
+		{
+			"tileName": "sample",
+			"quantity": 1,
+			"catalyst": true
+		},
+		{
+			"tileName": "sample",
+			"quantity": 1,
+			"catalyst": false
+		}
+	]
 }
