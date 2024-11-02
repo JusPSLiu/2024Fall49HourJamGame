@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://byne12n3b7vig"]
+
+[ext_resource type="Script" path="res://Scripts/grid_tile.gd" id="1_m23jp"]
+[ext_resource type="Texture2D" uid="uid://dylbo162gnx3b" path="res://Art/buttonReady.png" id="2_fl7m8"]
+[ext_resource type="Texture2D" uid="uid://c33dpxrtras52" path="res://Art/buttonPressed.png" id="3_yg8y4"]
+[ext_resource type="Texture2D" uid="uid://cqts400rb7orh" path="res://Art/buttonInactive.png" id="4_11aax"]
+
+[node name="GridTile" type="Control"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_m23jp")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(64, 64)
+offset_right = 64.0
+offset_bottom = 64.0
+texture_normal = ExtResource("2_fl7m8")
+texture_pressed = ExtResource("3_yg8y4")
+texture_disabled = ExtResource("4_11aax")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(64, 64)
+offset_right = 64.0
+offset_bottom = 64.0
+mouse_filter = 2

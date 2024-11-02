@@ -155,4 +155,3 @@ func _physics_process(delta):
 			child.position = lerp(child.position, Vector2(0,0), clamp(elapsed_time/time_to_form,0,1))
 		else:
 			child.position = lerp(child.position, Vector2(0,0), clamp(1-sqrt(1-(elapsed_time/time_to_form)*(elapsed_time/time_to_form)),0,1))
-
