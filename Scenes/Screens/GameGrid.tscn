@@ -5,23 +5,35 @@
 [node name="GameGrid" type="Control" node_paths=PackedStringArray("gameGridContainer")]
 layout_mode = 3
 anchors_preset = 0
+offset_left = 696.0
+offset_right = 696.0
 script = ExtResource("1_q8jw7")
 gameGridContainer = NodePath("ScrollContainer/HBoxContainer/VBoxContainer/GridContainer")
 tileOrder = Array[String](["sample3", "sample2", "sample4", "sample5", "sample"])
+metadata/_edit_group_ = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 584.0
 offset_bottom = 720.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = -696.0
 offset_right = 592.0
 offset_bottom = 720.0
+horizontal_scroll_mode = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer"]
 layout_mode = 2
 theme_override_constants/separation = 0
+
+[node name="ColorRect2" type="ColorRect" parent="ScrollContainer/HBoxContainer"]
+custom_minimum_size = Vector2(696, 0)
+layout_mode = 2
+color = Color(0, 0, 0, 0)
 
 [node name="ColorRect" type="ColorRect" parent="ScrollContainer/HBoxContainer"]
 custom_minimum_size = Vector2(8, 0)
