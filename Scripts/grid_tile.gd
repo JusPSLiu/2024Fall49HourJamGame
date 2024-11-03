@@ -20,12 +20,11 @@ func _ready() -> void:
 	$InfoCard/ColorRect/VBoxContainer/Label.text = tileName
 	$InfoCard/ColorRect/VBoxContainer/Label2.text = description
 	for component in components:
-		if (component and component.has("tileName") and component["tileName"] and GridTileSingleton.get_tile(component["tileName"])):
-			var iTile = ingredientTileScene.instantiate()
-			var iImage = GridTileSingleton.get_tile(component["tileName"]).image
-			iTile.setVariables(component["tileName"], iImage, component["quantity"], component["catalyst"])
-			neededTilesHolder.add_child(iTile)
-			componentTiles.append(iTile)
+		var iTile = ingredientTileScene.instantiate()
+		var iImage = GridTileSingleton.get_tile(component["tileName"]).image
+		iTile.setVariables(component["tileName"], iImage, component["quantity"], component["catalyst"])
+		neededTilesHolder.add_child(iTile)
+		componentTiles.append(iTile)
 	refresh()
 
 func refresh():

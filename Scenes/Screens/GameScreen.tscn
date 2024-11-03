@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://5hdwnchwawle" path="res://Scenes/Screens/GameGrid.tscn" id="1_7yhet"]
 [ext_resource type="PackedScene" uid="uid://cpea55l2oxor" path="res://Scenes/resourceHarvester.tscn" id="2_5hyvp"]
-[ext_resource type="Texture2D" uid="uid://be3od871i501" path="res://Art/MainMenu/background.png" id="2_ont60"]
+[ext_resource type="Texture2D" uid="uid://be3od871i501" path="res://Art/MainMenu/Background.png" id="2_ont60"]
 [ext_resource type="AudioStream" uid="uid://ca6lwqhvxcg7n" path="res://Sounds/Music/virusmusic.ogg" id="5_b8y6t"]
 [ext_resource type="Texture2D" uid="uid://b8wsnle4kmb7r" path="res://Art/Body/bodyback.png" id="6_w1cx4"]
 [ext_resource type="Texture2D" uid="uid://b4jccacvir7hq" path="res://Art/Body/feet.png" id="7_g2nol"]
