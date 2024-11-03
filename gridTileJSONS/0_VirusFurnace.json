@@ -1,0 +1,19 @@
+{
+	"tileName": "Virus Furnace",
+	"image": "res://Art/EarlyGame/VirusWood.png",
+	"description": "Furnace; Requires Hut",
+	"craftQuantity": 1,
+	"components":
+	[
+		{
+			"tileName": "Virus Hut",
+			"quantity": 1,
+			"catalyst": true
+		},
+		{
+			"tileName": "Virustone",
+			"quantity": 3,
+			"catalyst": false
+		}
+	]
+}

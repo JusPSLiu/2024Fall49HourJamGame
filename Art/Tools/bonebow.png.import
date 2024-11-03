@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be3od871i501"
-path="res://.godot/imported/background.png-0fd664d572fc94eb1741906a990a488e.ctex"
+uid="uid://dyud43pyi7mcj"
+path="res://.godot/imported/bonebow.png-1d2cfd4c5fd90dd42c2122700ec9c63b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/MainMenu/background.png"
-dest_files=["res://.godot/imported/background.png-0fd664d572fc94eb1741906a990a488e.ctex"]
+source_file="res://Art/Tools/bonebow.png"
+dest_files=["res://.godot/imported/bonebow.png-1d2cfd4c5fd90dd42c2122700ec9c63b.ctex"]
 
 [params]
 

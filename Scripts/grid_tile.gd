@@ -10,6 +10,7 @@ var components: Array
 var componentTiles : Array
 
 @onready var neededTilesHolder: HBoxContainer = $InfoCard/ColorRect/VBoxContainer/HBoxContainer
+@onready var craftsound : AudioStreamPlayer = $craftsound
 var ingredientTileScene: PackedScene = preload("res://Scenes/IngredientTile.tscn")
 
 func _ready() -> void:
@@ -19,11 +20,12 @@ func _ready() -> void:
 	$InfoCard/ColorRect/VBoxContainer/Label.text = tileName
 	$InfoCard/ColorRect/VBoxContainer/Label2.text = description
 	for component in components:
-		var iTile = ingredientTileScene.instantiate()
-		var iImage = GridTileSingleton.get_tile(component["tileName"]).image
-		iTile.setVariables(component["tileName"], iImage, component["quantity"], component["catalyst"])
-		neededTilesHolder.add_child(iTile)
-		componentTiles.append(iTile)
+		if (component and component.has("tileName") and component["tileName"] and GridTileSingleton.get_tile(component["tileName"])):
+			var iTile = ingredientTileScene.instantiate()
+			var iImage = GridTileSingleton.get_tile(component["tileName"]).image
+			iTile.setVariables(component["tileName"], iImage, component["quantity"], component["catalyst"])
+			neededTilesHolder.add_child(iTile)
+			componentTiles.append(iTile)
 	refresh()
 
 func refresh():
@@ -51,3 +53,4 @@ func _on_texture_button_pressed() -> void:
 			continue
 		GridTileSingleton.tileQuantities[cTile.ingredientName] -= cTile.quantity
 	GridTileSingleton.refreshAllTileQuantities()
+	craftsound.play()

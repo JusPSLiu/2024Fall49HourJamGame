@@ -1,11 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://cpea55l2oxor"]
+[gd_scene load_steps=10 format=3 uid="uid://cpea55l2oxor"]
 
 [ext_resource type="Script" path="res://Scripts/resource_harvester.gd" id="1_e7fis"]
-[ext_resource type="Texture2D" uid="uid://bhjbfqbccidat" path="res://Art/Elevator/Door.jpg" id="1_pgnbk"]
 [ext_resource type="Texture2D" uid="uid://dlwo6y5pl4yy5" path="res://Art/sampleTile2.png" id="2_8ay46"]
-[ext_resource type="Texture2D" uid="uid://dylbo162gnx3b" path="res://Art/buttonReady.png" id="3_hxexg"]
+[ext_resource type="Texture2D" uid="uid://ck2j31auvt621" path="res://Art/MainMenu/Bar.png" id="2_17p32"]
+[ext_resource type="Texture2D" uid="uid://dylbo162gnx3b" path="res://Art/MainMenu/buttonReady.png" id="3_hxexg"]
 [ext_resource type="Texture2D" uid="uid://qnidilimvjk6" path="res://Art/progressBarBack.png" id="3_odlmo"]
 [ext_resource type="Texture2D" uid="uid://mtgftbs8puld" path="res://Art/progressBarForward.png" id="4_pmj2g"]
+[ext_resource type="Texture2D" uid="uid://ea64flsoch4h" path="res://Art/MainMenu/BarCover.png" id="7_dodd7"]
+[ext_resource type="AudioStream" uid="uid://b3chj1njbw8qf" path="res://Sounds/UI/clickbar.wav" id="8_qi4uw"]
+[ext_resource type="AudioStream" uid="uid://cgw2mvp6s8r6x" path="res://Sounds/UI/bardone.wav" id="9_fdngs"]
 
 [node name="ResourceHarvester" type="Control"]
 layout_mode = 3
@@ -14,28 +17,34 @@ script = ExtResource("1_e7fis")
 resourceName = "sample"
 baseMiningSpeedPerSec = 1.0
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureButton" parent="."]
 custom_minimum_size = Vector2(256, 96)
-offset_right = 256.0
-offset_bottom = 96.0
-texture = ExtResource("1_pgnbk")
-expand_mode = 1
+layout_mode = 0
+offset_right = 579.0
+offset_bottom = 108.0
+scale = Vector2(0.667, 0.667)
+focus_mode = 0
+texture_normal = ExtResource("2_17p32")
+texture_hover = ExtResource("2_17p32")
+texture_focused = ExtResource("2_17p32")
 
 [node name="resourceTile" type="Control" parent="."]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 3
 anchors_preset = 0
-offset_left = 176.0
-offset_top = 16.0
-offset_right = 240.0
-offset_bottom = 80.0
+offset_left = 294.0
+offset_top = 4.0
+offset_right = 358.0
+offset_bottom = 68.0
+mouse_filter = 2
 
-[node name="ColorRect" type="TextureButton" parent="resourceTile"]
+[node name="ColorRect" type="TextureRect" parent="resourceTile"]
 layout_mode = 0
-offset_right = 64.0
-offset_bottom = 64.0
-texture_normal = ExtResource("3_hxexg")
-stretch_mode = 0
+offset_right = 96.0
+offset_bottom = 96.0
+scale = Vector2(0.667, 0.667)
+mouse_filter = 2
+texture = ExtResource("3_hxexg")
 
 [node name="TextureRect" type="TextureRect" parent="resourceTile"]
 custom_minimum_size = Vector2(64, 64)
@@ -47,11 +56,32 @@ texture = ExtResource("2_8ay46")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="resourceTile"]
 layout_mode = 0
-offset_left = 8.0
-offset_top = 56.0
-offset_right = 56.0
-offset_bottom = 60.0
+offset_left = -278.0
+offset_top = 47.0
+offset_right = -230.0
+offset_bottom = 51.0
+scale = Vector2(5.29788, 4.72608)
+mouse_filter = 2
 texture_under = ExtResource("3_odlmo")
 texture_progress = ExtResource("4_pmj2g")
 
-[connection signal="pressed" from="resourceTile/ColorRect" to="." method="startHarvest"]
+[node name="TextureRect2" type="TextureRect" parent="resourceTile"]
+custom_minimum_size = Vector2(256, 96)
+layout_mode = 0
+offset_left = -294.0
+offset_top = -4.0
+offset_right = 285.0
+offset_bottom = 104.0
+scale = Vector2(0.667, 0.667)
+mouse_filter = 2
+texture = ExtResource("7_dodd7")
+
+[node name="boop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_qi4uw")
+volume_db = -20.0
+
+[node name="beep" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_fdngs")
+volume_db = -25.0
+
+[connection signal="pressed" from="TextureRect" to="." method="startHarvest"]

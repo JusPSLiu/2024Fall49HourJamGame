@@ -1,7 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://bea40v36n8hoc"]
+[gd_scene load_steps=17 format=3 uid="uid://bea40v36n8hoc"]
 
 [ext_resource type="PackedScene" uid="uid://5hdwnchwawle" path="res://Scenes/Screens/GameGrid.tscn" id="1_7yhet"]
 [ext_resource type="PackedScene" uid="uid://cpea55l2oxor" path="res://Scenes/resourceHarvester.tscn" id="2_5hyvp"]
+[ext_resource type="Texture2D" uid="uid://be3od871i501" path="res://Art/MainMenu/background.png" id="2_ont60"]
+[ext_resource type="AudioStream" uid="uid://ca6lwqhvxcg7n" path="res://Sounds/Music/virusmusic.ogg" id="5_b8y6t"]
+[ext_resource type="Texture2D" uid="uid://b8wsnle4kmb7r" path="res://Art/Body/bodyback.png" id="6_w1cx4"]
+[ext_resource type="Texture2D" uid="uid://b4jccacvir7hq" path="res://Art/Body/feet.png" id="7_g2nol"]
+[ext_resource type="Script" path="res://Scripts/body_display.gd" id="7_qd5ry"]
+[ext_resource type="Texture2D" uid="uid://bikd4odvapukx" path="res://Art/Body/shins.png" id="8_at8o7"]
+[ext_resource type="Texture2D" uid="uid://c3jeq7imb33xh" path="res://Art/Body/thighs.png" id="9_fpc0c"]
+[ext_resource type="Texture2D" uid="uid://cltv3yoh6rs0w" path="res://Art/Body/waist.png" id="10_knmnj"]
+[ext_resource type="Texture2D" uid="uid://bjlu1osfrw1eq" path="res://Art/Body/torso.png" id="11_833q5"]
+[ext_resource type="Texture2D" uid="uid://dk4qcg3xvbbyw" path="res://Art/Body/collarbone.png" id="12_mtttt"]
+[ext_resource type="Texture2D" uid="uid://cuifov435jwm7" path="res://Art/Body/shoulders.png" id="13_u1568"]
+[ext_resource type="Texture2D" uid="uid://bvfta1hf8661r" path="res://Art/Body/wrist.png" id="14_grm7l"]
+[ext_resource type="Texture2D" uid="uid://5m57mu5cju56" path="res://Art/Body/hand.png" id="15_slyfh"]
+[ext_resource type="Texture2D" uid="uid://oc3vnrkefk1p" path="res://Art/Body/head.png" id="16_0t854"]
 
 [node name="GameScreen" type="Control"]
 layout_mode = 3
@@ -11,6 +25,114 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="GameGrid" parent="." instance=ExtResource("1_7yhet")]
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ont60")
+expand_mode = 1
 
-[node name="ResourceHarvester" parent="." instance=ExtResource("2_5hyvp")]
+[node name="GameGrid" parent="." instance=ExtResource("1_7yhet")]
+offset_left = 608.0
+offset_right = 608.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 354.0
+offset_right = 120.0
+offset_bottom = 394.0
+theme_override_constants/separation = 74
+
+[node name="ResourceHarvester" parent="VBoxContainer" instance=ExtResource("2_5hyvp")]
+layout_mode = 2
+
+[node name="ResourceHarvester2" parent="VBoxContainer" instance=ExtResource("2_5hyvp")]
+layout_mode = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_b8y6t")
+autoplay = true
+
+[node name="BodyDisplay" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 1.0
+offset_right = 521.0
+offset_bottom = 531.0
+scale = Vector2(0.667, 0.667)
+texture = ExtResource("6_w1cx4")
+script = ExtResource("7_qd5ry")
+
+[node name="Feet" type="TextureRect" parent="BodyDisplay"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("7_g2nol")
+
+[node name="Shins" type="TextureRect" parent="BodyDisplay"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("8_at8o7")
+
+[node name="Thighs" type="TextureRect" parent="BodyDisplay"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("9_fpc0c")
+
+[node name="Waist" type="TextureRect" parent="BodyDisplay"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("10_knmnj")
+
+[node name="Torso" type="TextureRect" parent="BodyDisplay"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("11_833q5")
+
+[node name="Collarbone" type="TextureRect" parent="BodyDisplay"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("12_mtttt")
+
+[node name="Shoulders" type="TextureRect" parent="BodyDisplay"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("13_u1568")
+
+[node name="Forearms" type="TextureRect" parent="BodyDisplay"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("14_grm7l")
+
+[node name="Hands" type="TextureRect" parent="BodyDisplay"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("15_slyfh")
+
+[node name="Head" type="TextureRect" parent="BodyDisplay"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("16_0t854")

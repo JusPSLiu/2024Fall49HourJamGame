@@ -1,0 +1,9 @@
+{
+	"tileName": "Virus Wood",
+	"image": "res://Art/EarlyGame/VirusWood.png",
+	"description": "An Important Viral Material",
+	"craftQuantity": 0,
+	"components":
+	[
+	]
+}

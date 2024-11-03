@@ -1,0 +1,14 @@
+{
+	"tileName": "Virus Hut",
+	"image": "res://Art/EarlyGame/VirusHut.png",
+	"description": "An Home For Viruses",
+	"craftQuantity": 1,
+	"components":
+	[
+		{
+			"tileName": "Virustone",
+			"quantity": 10,
+			"catalyst": false
+		}
+	]
+}

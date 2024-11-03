@@ -4,6 +4,8 @@ extends Control
 @export var baseMiningSpeedPerSec: float
 
 @onready var resource = GridTileSingleton.get_tile(resourceName)
+@onready var boop = $boop
+@onready var beep = $beep
 
 var started: bool = false
 var progress = 0
@@ -29,7 +31,9 @@ func startHarvest():
 		return
 	started = true
 	progress = 0
+	boop.play()
 
 func onHarvested():
 	GridTileSingleton.tileQuantities[resourceName] += 1
 	GridTileSingleton.refreshAllTileQuantities()
+	beep.play()

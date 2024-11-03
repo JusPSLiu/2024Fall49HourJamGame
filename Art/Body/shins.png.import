@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be3od871i501"
-path="res://.godot/imported/background.png-0fd664d572fc94eb1741906a990a488e.ctex"
+uid="uid://bikd4odvapukx"
+path="res://.godot/imported/shins.png-f3fa875f7aa5daa7f162de00c3117716.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/MainMenu/background.png"
-dest_files=["res://.godot/imported/background.png-0fd664d572fc94eb1741906a990a488e.ctex"]
+source_file="res://Art/Body/shins.png"
+dest_files=["res://.godot/imported/shins.png-f3fa875f7aa5daa7f162de00c3117716.ctex"]
 
 [params]
 

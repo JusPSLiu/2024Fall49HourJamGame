@@ -1,0 +1,14 @@
+{
+	"tileName": "Virustone",
+	"image": "res://Art/EarlyGame/VirusStone.png",
+	"description": "Stone Made of Virus",
+	"craftQuantity": 1,
+	"components": 
+	[
+		{
+			"tileName": "Virus",
+			"quantity": 5,
+			"catalyst": false
+		}
+	]
+}

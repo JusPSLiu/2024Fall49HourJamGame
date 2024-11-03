@@ -1,14 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://byne12n3b7vig"]
+[gd_scene load_steps=6 format=3 uid="uid://byne12n3b7vig"]
 
 [ext_resource type="Script" path="res://Scripts/grid_tile.gd" id="1_m23jp"]
-[ext_resource type="Texture2D" uid="uid://dylbo162gnx3b" path="res://Art/buttonReady.png" id="2_fl7m8"]
-[ext_resource type="Texture2D" uid="uid://c33dpxrtras52" path="res://Art/buttonPressed.png" id="3_yg8y4"]
-[ext_resource type="Texture2D" uid="uid://cqts400rb7orh" path="res://Art/buttonInactive.png" id="4_11aax"]
+[ext_resource type="Texture2D" uid="uid://dylbo162gnx3b" path="res://Art/MainMenu/buttonReady.png" id="2_fl7m8"]
+[ext_resource type="Texture2D" uid="uid://c33dpxrtras52" path="res://Art/MainMenu/buttonPressed.png" id="3_yg8y4"]
+[ext_resource type="Texture2D" uid="uid://cqts400rb7orh" path="res://Art/MainMenu/buttonInactive.png" id="4_11aax"]
+[ext_resource type="AudioStream" uid="uid://dn2rcheu010rr" path="res://Sounds/UI/clickbutton.wav" id="5_4m0q3"]
 
 [node name="GridTile" type="Control"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 3
 anchors_preset = 0
+offset_right = 64.0
+offset_bottom = 64.0
 script = ExtResource("1_m23jp")
 
 [node name="TextureButton" type="TextureButton" parent="."]
@@ -16,6 +19,7 @@ custom_minimum_size = Vector2(64, 64)
 layout_mode = 0
 offset_right = 64.0
 offset_bottom = 64.0
+scale = Vector2(0.667, 0.667)
 texture_normal = ExtResource("2_fl7m8")
 texture_pressed = ExtResource("3_yg8y4")
 texture_disabled = ExtResource("4_11aax")
@@ -30,19 +34,22 @@ mouse_filter = 2
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 24.0
-offset_top = 41.0
-offset_right = 40.0
-offset_bottom = 64.0
+offset_left = 4.0
+offset_top = 36.0
+offset_right = 22.0
+offset_bottom = 81.0
+scale = Vector2(0.667, 0.667)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 32
 text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="InfoCard" type="Control" parent="."]
 layout_mode = 1
+anchors_preset = 0
 offset_left = -200.0
 offset_right = -200.0
 grow_vertical = 2
@@ -76,6 +83,10 @@ layout_mode = 2
 layout_mode = 2
 theme_override_font_sizes/font_size = 12
 text = "description"
+
+[node name="craftsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_4m0q3")
+volume_db = -5.0
 
 [connection signal="mouse_entered" from="TextureButton" to="." method="_on_Button_mouse_entered"]
 [connection signal="mouse_exited" from="TextureButton" to="." method="_on_Button_mouse_exited"]
