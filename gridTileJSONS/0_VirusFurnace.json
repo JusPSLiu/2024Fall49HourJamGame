@@ -3,10 +3,16 @@
 	"image": "res://Art/EarlyGame/VirusFurnace.png",
 	"description": "Furnace; Requires Hut",
 	"craftQuantity": 1,
+	"single" : true,
 	"components":
 	[
 		{
 			"tileName": "Virus Hut",
+			"quantity": 1,
+			"catalyst": true
+		},
+		{
+			"tileName": "Virus Hammer",
 			"quantity": 1,
 			"catalyst": true
 		},

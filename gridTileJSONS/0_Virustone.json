@@ -3,6 +3,7 @@
 	"image": "res://Art/EarlyGame/VirusStone.png",
 	"description": "Stone Made of Virus",
 	"craftQuantity": 1,
+	"single" : false,
 	"components": 
 	[
 		{

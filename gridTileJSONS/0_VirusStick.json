@@ -3,6 +3,7 @@
 	"image": "res://Art/EarlyGame/Virustick.png",
 	"description": "A Virus Stick",
 	"craftQuantity": 4,
+	"single" : false,
 	"components": 
 	[
 		{

@@ -2,6 +2,7 @@ extends Control
 
 @export var resourceNames: Array[String]
 @export var baseMiningSpeedPerSec: float
+@export var batchSize: int = 1
 
 @onready var resources : Array
 @onready var boop = $boop
@@ -16,6 +17,9 @@ func _ready() -> void:
 	for name in resourceNames:
 		resources.push_back(GridTileSingleton.get_tile(name))
 	$resourceTile/TextureRect.texture = resources[0].image
+	if (OS.is_debug_build()):
+		baseMiningSpeedPerSec *= 0.001
+		batchSize *= 20
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -38,7 +42,7 @@ func startHarvest():
 
 
 func onHarvested():
-	GridTileSingleton.tileQuantities[resourceNames[currentResource]] += 1
+	GridTileSingleton.tileQuantities[resourceNames[currentResource]] += batchSize
 	GridTileSingleton.refreshAllTileQuantities()
 	beep.play()
 	if (resourceNames.size() > 0):

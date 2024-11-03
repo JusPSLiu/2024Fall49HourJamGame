@@ -12,4 +12,4 @@ func setVariables(iName: String, image: Texture2D, q: int, c: bool):
 	catalyst = c
 	$TextureRect.texture = image
 	$TextureRect.scale = Vector2(64/$TextureRect.size.x,64/$TextureRect.size.y)
-	$Label.text = str(quantity) if !c else ""
+	$Label.text = str(quantity) if (!c || q != 1) else ""

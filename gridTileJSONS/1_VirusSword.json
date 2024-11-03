@@ -1,0 +1,25 @@
+{
+	"tileName": "Virus Sword",
+	"image": "res://Art/Tools/VirusSword.png",
+	"description": "Sword for a Swordsman",
+	"craftQuantity": 1,
+	"single" : false,
+	"components":
+	[
+		{
+			"tileName": "Virus Furnace",
+			"quantity": 1,
+			"catalyst": true
+		},
+		{
+			"tileName": "Virus Stick",
+			"quantity": 2,
+			"catalyst": false
+		},
+		{
+			"tileName": "Virustone",
+			"quantity": 2,
+			"catalyst": false
+		}
+	]
+}

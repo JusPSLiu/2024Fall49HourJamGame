@@ -1,0 +1,25 @@
+{
+	"tileName": "Virus Bow",
+	"image": "res://Art/Tools/VirusBow.png",
+	"description": "Bow for an Archer",
+	"craftQuantity": 1,
+	"single" : false,
+	"components":
+	[
+		{
+			"tileName": "Virus Furnace",
+			"quantity": 1,
+			"catalyst": true
+		},
+		{
+			"tileName": "Virus String",
+			"quantity": 4,
+			"catalyst": false
+		},
+		{
+			"tileName": "Virustone",
+			"quantity": 2,
+			"catalyst": false
+		}
+	]
+}

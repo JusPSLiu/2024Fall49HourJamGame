@@ -1,0 +1,25 @@
+{
+	"tileName": "Virus School",
+	"image": "res://Art/EarlyGame/VirusSchool.png",
+	"description": "School to Teach Viruses Speed",
+	"craftQuantity": 1,
+	"single" : true,
+	"components":
+	[
+		{
+			"tileName": "Virus Town Hall",
+			"quantity": 1,
+			"catalyst": true
+		},
+		{
+			"tileName": "Virus Hut",
+			"quantity": 3,
+			"catalyst": true
+		},
+		{
+			"tileName": "Virus",
+			"quantity": 30,
+			"catalyst": false
+		}
+	]
+}

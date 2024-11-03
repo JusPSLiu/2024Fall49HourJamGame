@@ -6,6 +6,7 @@ var tileName: String = "sample"
 var image : Texture2D = preload("res://Art/sampleTile.png")
 var description: String = "No description"
 var craftQuantity: int = 1
+var single : bool
 var components: Array
 var componentTiles : Array
 
@@ -32,9 +33,10 @@ func refresh():
 	$Label.text = str(quantity)
 	var canAfford = true
 	for cTile in componentTiles:
-		if cTile.catalyst and GridTileSingleton.tileQuantities[cTile.ingredientName] > 0:
+		'if cTile.catalyst and GridTileSingleton.tileQuantities[cTile.ingredientName] > 0:
 			continue
-		elif cTile.quantity > GridTileSingleton.tileQuantities[cTile.ingredientName]:
+		el'
+		if cTile.quantity > GridTileSingleton.tileQuantities[cTile.ingredientName]:
 			canAfford = false
 			break
 	$TextureButton.disabled = true if !canAfford else false
@@ -47,6 +49,7 @@ func _on_Button_mouse_exited():
 
 func _on_texture_button_pressed() -> void:
 	if (craftQuantity < 1): return
+	if (single and GridTileSingleton.tileQuantities[tileName] >= 1): return
 	GridTileSingleton.tileQuantities[tileName] += craftQuantity
 	for cTile in componentTiles:
 		if cTile.catalyst:

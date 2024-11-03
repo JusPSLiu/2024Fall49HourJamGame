@@ -3,6 +3,7 @@
 	"image": "res://Art/EarlyGame/Virus.png",
 	"description": "A Basic Virus",
 	"craftQuantity": 0,
+	"single" : false,
 	"components": 
 	[
 	]

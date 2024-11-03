@@ -1,0 +1,20 @@
+{
+	"tileName": "Virus Town Hall",
+	"image": "res://Art/EarlyGame/VirusHall.png",
+	"description": "Town Hall for Mayor",
+	"craftQuantity": 1,
+	"single" : true,
+	"components":
+	[
+		{
+			"tileName": "Virus Hut",
+			"quantity": 2,
+			"catalyst": true
+		},
+		{
+			"tileName": "Virustone",
+			"quantity": 5,
+			"catalyst": false
+		}
+	]
+}

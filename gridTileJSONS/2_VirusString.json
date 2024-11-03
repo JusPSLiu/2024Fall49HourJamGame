@@ -1,0 +1,10 @@
+{
+	"tileName": "Virus String",
+	"image": "res://Art/EarlyGame/Virus String.png",
+	"description": "A String for Crafting",
+	"craftQuantity": 0,
+	"single" : false,
+	"components": 
+	[
+	]
+}

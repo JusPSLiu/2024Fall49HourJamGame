@@ -44,6 +44,7 @@ func load_tile_from_file(file_path: String) -> void:
 			tile.image = load(tile_data.get("image", "res://Art/default.png")) # Provide a fallback texture path
 			tile.description = tile_data.get("description", "No description available")
 			tile.craftQuantity = int(tile_data.get("craftQuantity", 1))
+			tile.single = tile_data.get("single", false)
 			
 			# Parse and set components
 			var components_data = tile_data.get("components", [])

@@ -1,0 +1,15 @@
+{
+	"tileName": "Virus Cloth",
+	"image": "res://Art/EarlyGame/VirusCloth.png",
+	"description": "Cloth for Sail",
+	"craftQuantity": 4,
+	"single" : false,
+	"components":
+	[
+		{
+			"tileName": "Virus Wool",
+			"quantity": 1,
+			"catalyst": false
+		}
+	]
+}

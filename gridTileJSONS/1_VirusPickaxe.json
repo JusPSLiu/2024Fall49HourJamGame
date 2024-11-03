@@ -1,13 +1,13 @@
 {
-	"tileName": "Virus Hammer",
-	"image": "res://Art/Tools/VirusHammer.png",
-	"description": "Hammer for Something Possibly",
+	"tileName": "Virus Pickaxe",
+	"image": "res://Art/Tools/VirusPickaxe.png",
+	"description": "Pickaxe for a Miner",
 	"craftQuantity": 1,
 	"single" : false,
 	"components":
 	[
 		{
-			"tileName": "Virus Hut",
+			"tileName": "Virus Furnace",
 			"quantity": 1,
 			"catalyst": true
 		},

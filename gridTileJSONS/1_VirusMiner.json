@@ -1,0 +1,25 @@
+{
+	"tileName": "Virus Miner",
+	"image": "res://Art/EarlyGame/VirusMiner.png",
+	"description": "Miner, Can Mine for You",
+	"craftQuantity": 1,
+	"single" : false,
+	"components":
+	[
+		{
+			"tileName": "Virus",
+			"quantity": 5,
+			"catalyst": false
+		},
+		{
+			"tileName": "Virus Shovel",
+			"quantity": 1,
+			"catalyst": false
+		},
+		{
+			"tileName": "Virus Pickaxe",
+			"quantity": 1,
+			"catalyst": false
+		}
+	]
+}

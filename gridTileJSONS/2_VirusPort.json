@@ -1,0 +1,25 @@
+{
+	"tileName": "Virus Trade Port",
+	"image": "res://Art/EarlyGame/VirusPort.png",
+	"description": "Port to Get Cloths",
+	"craftQuantity": 1,
+	"single" : true,
+	"components":
+	[
+		{
+			"tileName": "Virus Town Hall",
+			"quantity": 1,
+			"catalyst": true
+		},
+		{
+			"tileName": "Virus Hut",
+			"quantity": 4,
+			"catalyst": true
+		},
+		{
+			"tileName": "Virus",
+			"quantity": 20,
+			"catalyst": false
+		}
+	]
+}

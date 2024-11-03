@@ -1,6 +1,6 @@
 {
-	"tileName": "Virus Wood",
-	"image": "res://Art/EarlyGame/VirusWood.png",
+	"tileName": "Virus Wool",
+	"image": "res://Art/EarlyGame/VirusWool.png",
 	"description": "An Important Viral Material",
 	"craftQuantity": 0,
 	"single" : false,
