@@ -15,6 +15,11 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_e7fis")
 baseMiningSpeedPerSec = 1.0
+autoHarvesters = [{
+"baseHarvestSpeedPerSec": 1,
+"minHarvestSpeedPerSec": 0.001,
+"resourceName": "Virus"
+}]
 
 [node name="TextureRect" type="TextureButton" parent="."]
 custom_minimum_size = Vector2(256, 96)
