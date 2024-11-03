@@ -22,15 +22,16 @@ var miningSpeed: float
 func _ready() -> void:
 	if neededResource != "":
 		$TextureRect.disabled = true
+		$TextureRect.modulate = Color(0.2,0.2,0.2)
 	else:
 		gotNeededResource = true
 	miningSpeed = baseMiningSpeedPerSec
 	for name in resourceNames:
 		resources.push_back(GridTileSingleton.get_tile(name))
 	$resourceTile/TextureRect.texture = resources[0].image
-	#if (OS.is_debug_build()):
-	#	baseMiningSpeedPerSec *= 0.001
-	#	batchSize *= 20
+	if (OS.is_debug_build()):
+		miningSpeed *= 0.002
+		batchSize *= 20
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -40,6 +41,7 @@ func _process(delta: float) -> void:
 		else:
 			gotNeededResource = true
 			$TextureRect.disabled = false
+			$TextureRect.modulate = Color(1,1,1)
 	if !started:
 		return
 	progress += delta/miningSpeed * 100

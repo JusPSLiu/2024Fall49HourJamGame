@@ -1,46 +1,48 @@
-[gd_scene load_steps=3 format=3 uid="uid://c16ejmefmt5ps"]
+[gd_scene load_steps=6 format=3 uid="uid://c16ejmefmt5ps"]
 
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_trfaj"]
 [ext_resource type="Texture2D" uid="uid://be3od871i501" path="res://Art/MainMenu/background.png" id="2_ndoex"]
+[ext_resource type="Texture2D" uid="uid://bd1fpuyh8w1e" path="res://Art/MainMenu/title.png" id="3_y773o"]
+[ext_resource type="Texture2D" uid="uid://cguiyg6xiqlgi" path="res://Art/MainMenu/playbutton.png" id="4_4g5n0"]
+[ext_resource type="Texture2D" uid="uid://bngk1hlcpis7l" path="res://Art/MainMenu/playbuttonhover.png" id="5_uemmo"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+scale = Vector2(0.667, 0.667)
 script = ExtResource("1_trfaj")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 1280.0
-offset_bottom = 720.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 texture = ExtResource("2_ndoex")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="."]
+[node name="|" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 304.0
-offset_top = 73.0
-offset_right = 963.0
-offset_bottom = 248.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 32
-theme_override_font_sizes/font_size = 128
-text = "GrindVirus"
+offset_left = 233.883
+offset_top = 92.9535
+offset_right = 1673.88
+offset_bottom = 348.954
+texture = ExtResource("3_y773o")
 
-[node name="StartButton" type="Button" parent="."]
+[node name="StartButton" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 448.0
-offset_top = 322.0
-offset_right = 834.0
-offset_bottom = 392.0
-theme_override_font_sizes/font_size = 34
-text = "Play"
+offset_left = 667.166
+offset_top = 473.763
+offset_right = 1179.17
+offset_bottom = 729.763
+texture_normal = ExtResource("4_4g5n0")
+texture_hover = ExtResource("5_uemmo")
 
 [node name="QuitButton" type="Button" parent="."]
+visible = false
 layout_mode = 0
-offset_left = 448.0
-offset_top = 400.0
-offset_right = 834.0
-offset_bottom = 498.0
+offset_left = 736.132
+offset_top = 895.052
+offset_right = 1122.13
+offset_bottom = 993.052
 theme_override_font_sizes/font_size = 34
 text = "Exit"
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be3od871i501"
-path="res://.godot/imported/background.png-0fd664d572fc94eb1741906a990a488e.ctex"
+uid="uid://cw4x5t73ya1ms"
+path="res://.godot/imported/BarHober.png-e51ad2d5d523e32dc77b742fcb941c05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/MainMenu/background.png"
-dest_files=["res://.godot/imported/background.png-0fd664d572fc94eb1741906a990a488e.ctex"]
+source_file="res://Art/MainMenu/BarHober.png"
+dest_files=["res://.godot/imported/BarHober.png-e51ad2d5d523e32dc77b742fcb941c05.ctex"]
 
 [params]
 

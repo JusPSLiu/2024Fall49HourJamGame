@@ -1,0 +1,25 @@
+{
+	"tileName": "Virus Lord",
+	"image": "res://Art/EarlyGame/VirusCastle.png",
+	"description": "A Virus Lord for a Virus Castle",
+	"craftQuantity": 1,
+	"single" : false,
+	"components":
+	[
+		{
+			"tileName": "Virus Castle",
+			"quantity": 1,
+			"catalyst": true
+		},
+		{
+			"tileName": "Virus",
+			"quantity": 10,
+			"catalyst": true
+		},
+		{
+			"tileName": "Virustone",
+			"quantity": 6,
+			"catalyst": true
+		}
+	]
+}

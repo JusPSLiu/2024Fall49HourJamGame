@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be3od871i501"
-path="res://.godot/imported/background.png-0fd664d572fc94eb1741906a990a488e.ctex"
+uid="uid://c2n1y3hx7q8qc"
+path="res://.godot/imported/VirusCastle.png-40b2bc21af40409fb637637e97b53f93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/MainMenu/background.png"
-dest_files=["res://.godot/imported/background.png-0fd664d572fc94eb1741906a990a488e.ctex"]
+source_file="res://Art/EarlyGame/VirusCastle.png"
+dest_files=["res://.godot/imported/VirusCastle.png-40b2bc21af40409fb637637e97b53f93.ctex"]
 
 [params]
 

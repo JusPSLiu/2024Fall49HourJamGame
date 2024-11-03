@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://cpea55l2oxor"]
+[gd_scene load_steps=11 format=3 uid="uid://cpea55l2oxor"]
 
 [ext_resource type="Script" path="res://Scripts/resource_harvester.gd" id="1_e7fis"]
 [ext_resource type="Texture2D" uid="uid://dlwo6y5pl4yy5" path="res://Art/sampleTile2.png" id="2_8ay46"]
 [ext_resource type="Texture2D" uid="uid://ck2j31auvt621" path="res://Art/MainMenu/Bar.png" id="2_17p32"]
+[ext_resource type="Texture2D" uid="uid://cw4x5t73ya1ms" path="res://Art/MainMenu/BarHober.png" id="3_dxr2a"]
 [ext_resource type="Texture2D" uid="uid://dylbo162gnx3b" path="res://Art/MainMenu/buttonReady.png" id="3_hxexg"]
 [ext_resource type="Texture2D" uid="uid://qnidilimvjk6" path="res://Art/progressBarBack.png" id="3_odlmo"]
 [ext_resource type="Texture2D" uid="uid://mtgftbs8puld" path="res://Art/progressBarForward.png" id="4_pmj2g"]
@@ -29,7 +30,7 @@ offset_bottom = 108.0
 scale = Vector2(0.667, 0.667)
 focus_mode = 0
 texture_normal = ExtResource("2_17p32")
-texture_hover = ExtResource("2_17p32")
+texture_hover = ExtResource("3_dxr2a")
 texture_focused = ExtResource("2_17p32")
 
 [node name="resourceTile" type="Control" parent="."]

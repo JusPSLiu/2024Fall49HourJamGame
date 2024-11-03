@@ -1,0 +1,25 @@
+{
+	"tileName": "Virus Castle",
+	"image": "res://Art/EarlyGame/VirusCastle.png",
+	"description": "An Castle for a Virus Lord",
+	"craftQuantity": 1,
+	"single" : false,
+	"components":
+	[
+		{
+			"tileName": "Virus Trade Port",
+			"quantity": 1,
+			"catalyst": true
+		},
+		{
+			"tileName": "Virus Wood",
+			"quantity": 10,
+			"catalyst": true
+		},
+		{
+			"tileName": "Virustone",
+			"quantity": 10,
+			"catalyst": true
+		}
+	]
+}
