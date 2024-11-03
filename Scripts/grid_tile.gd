@@ -2,7 +2,7 @@ extends Control
 
 class_name gridTile
 
-var tileName: String = "baseTile"
+var tileName: String = "sample"
 var image : Texture2D = preload("res://Art/sampleTile.png")
 var description: String = "No description"
 var craftQuantity: int = 1
