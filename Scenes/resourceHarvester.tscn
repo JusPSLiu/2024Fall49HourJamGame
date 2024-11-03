@@ -14,7 +14,6 @@
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_e7fis")
-resourceName = "sample"
 baseMiningSpeedPerSec = 1.0
 
 [node name="TextureRect" type="TextureButton" parent="."]
@@ -45,12 +44,14 @@ offset_bottom = 96.0
 scale = Vector2(0.667, 0.667)
 mouse_filter = 2
 texture = ExtResource("3_hxexg")
+expand_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="resourceTile"]
-custom_minimum_size = Vector2(64, 64)
+custom_minimum_size = Vector2(96, 96)
 layout_mode = 0
 offset_right = 64.0
 offset_bottom = 64.0
+scale = Vector2(0.667, 0.667)
 mouse_filter = 2
 texture = ExtResource("2_8ay46")
 

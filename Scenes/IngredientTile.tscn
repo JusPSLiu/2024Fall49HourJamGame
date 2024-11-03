@@ -15,11 +15,13 @@ offset_bottom = 64.0
 color = Color(0.537011, 0.537011, 0.537011, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
-custom_minimum_size = Vector2(64, 64)
+custom_minimum_size = Vector2(96, 96)
 layout_mode = 0
 offset_right = 64.0
 offset_bottom = 64.0
+scale = Vector2(0.667, 0.667)
 mouse_filter = 2
+expand_mode = 1
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0

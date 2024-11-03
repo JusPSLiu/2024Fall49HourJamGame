@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be3od871i501"
-path="res://.godot/imported/background.png-0fd664d572fc94eb1741906a990a488e.ctex"
+uid="uid://bx87pp1xdahc0"
+path="res://.godot/imported/VirusFurnace.png-f87c0ffd0d91494a9ad466639315c603.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/MainMenu/background.png"
-dest_files=["res://.godot/imported/background.png-0fd664d572fc94eb1741906a990a488e.ctex"]
+source_file="res://Art/EarlyGame/VirusFurnace.png"
+dest_files=["res://.godot/imported/VirusFurnace.png-f87c0ffd0d91494a9ad466639315c603.ctex"]
 
 [params]
 

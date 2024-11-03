@@ -1,7 +1,7 @@
 {
-	"tileName": "Virus Furnace",
-	"image": "res://Art/EarlyGame/VirusWood.png",
-	"description": "Furnace; Requires Hut",
+	"tileName": "Virus Hammer",
+	"image": "res://Art/Tools/VirusHammer.png",
+	"description": "Hammer for Something Possibly",
 	"craftQuantity": 1,
 	"components":
 	[
@@ -13,6 +13,11 @@
 		{
 			"tileName": "Virustone",
 			"quantity": 3,
+			"catalyst": false
+		},
+		{
+			"tileName": "Virus Stick",
+			"quantity": 2,
 			"catalyst": false
 		}
 	]

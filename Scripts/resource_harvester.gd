@@ -1,18 +1,21 @@
 extends Control
 
-@export var resourceName: String
+@export var resourceNames: Array[String]
 @export var baseMiningSpeedPerSec: float
 
-@onready var resource = GridTileSingleton.get_tile(resourceName)
+@onready var resources : Array
 @onready var boop = $boop
 @onready var beep = $beep
 
+var currentResource = 0
 var started: bool = false
 var progress = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$resourceTile/TextureRect.texture = resource.image
+	for name in resourceNames:
+		resources.push_back(GridTileSingleton.get_tile(name))
+	$resourceTile/TextureRect.texture = resources[0].image
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -33,7 +36,13 @@ func startHarvest():
 	progress = 0
 	boop.play()
 
+
 func onHarvested():
-	GridTileSingleton.tileQuantities[resourceName] += 1
+	GridTileSingleton.tileQuantities[resourceNames[currentResource]] += 1
 	GridTileSingleton.refreshAllTileQuantities()
 	beep.play()
+	if (resourceNames.size() > 0):
+		var prevRsc = currentResource
+		currentResource = randi_range(0,resourceNames.size()-1)
+		if (currentResource != prevRsc):
+			$resourceTile/TextureRect.texture = resources[currentResource].image

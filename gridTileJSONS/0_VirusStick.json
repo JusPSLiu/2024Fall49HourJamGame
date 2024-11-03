@@ -1,0 +1,14 @@
+{
+	"tileName": "Virus Stick",
+	"image": "res://Art/EarlyGame/Virustick.png",
+	"description": "A Virus Stick",
+	"craftQuantity": 4,
+	"components": 
+	[
+		{
+			"tileName": "Virus Wood",
+			"quantity": 2,
+			"catalyst": false
+		}
+	]
+}

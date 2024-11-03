@@ -1,6 +1,6 @@
 {
 	"tileName": "Virus Furnace",
-	"image": "res://Art/EarlyGame/VirusWood.png",
+	"image": "res://Art/EarlyGame/VirusFurnace.png",
 	"description": "Furnace; Requires Hut",
 	"craftQuantity": 1,
 	"components":

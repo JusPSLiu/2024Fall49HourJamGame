@@ -46,7 +46,8 @@ func _on_Button_mouse_exited():
 	$InfoCard.hide()
 
 func _on_texture_button_pressed() -> void:
-	GridTileSingleton.tileQuantities[tileName] += 1
+	if (craftQuantity < 1): return
+	GridTileSingleton.tileQuantities[tileName] += craftQuantity
 	for cTile in componentTiles:
 		if cTile.catalyst:
 			continue
